@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Generator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .bio-output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Professional Bio Generator</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="career">Career:</label>
+            <input type="text" class="form-control" id="career" name="career" required>
+        </div>
+        <div class="form-group">
+            <label for="interests">Interests:</label>
+            <input type="text" class="form-control" id="interests" name="interests" required>
+        </div>
+        <div class="form-group">
+            <label for="traits">Traits:</label>
+            <input type="text" class="form-control" id="traits" name="traits" required>
+        </div>
+        <div class="form-group">
+            <label for="academic_background">Academic Background:</label>
+            <input type="text" class="form-control" id="academic_background" name="academic_background" required>
+        </div>
+        <div class="form-group">
+            <label for="research_focus">Research Focus:</label>
+            <input type="text" class="form-control" id="research_focus" name="research_focus" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Generate Bio</button>
+    </form>
+
+    {% if bio %}
+    <div class="bio-output">
+        <h5>Generated Bio:</h5>
+        <p>{{ bio }}</p>
+    </div>
+    {% endif %}
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
