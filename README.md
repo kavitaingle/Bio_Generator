@@ -3,9 +3,8 @@
 **Overview**
 
 This Flask application generates professional bios using the GPT-2 model from Hugging Face's Transformers library. Users can input their career, interests, traits, academic background, and research focus to receive a customized bio that highlights their skills and unique qualities.
-**
-Features
-**
+
+**Features**
 User-friendly web interface for inputting personal information.
 Utilizes the GPT-2 model for text generation.
 Generates concise and engaging professional bios.
